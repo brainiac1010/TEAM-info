@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Info</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f3f4f6;
+        }
+        header h2 {
+            color: #1d4ed8; 
+        }
+        .team-card {
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .team-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+        .team-card img {
+            border-radius: 0.5rem;
+            transition: opacity 0.3s;
+        }
+        .team-card img:hover {
+            opacity: 0.8;
+        }
+        input[type="text"] {
+            border: 2px solid #ddd;
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus {
+            border-color: #1d4ed8;
+            outline: none;
+        }
+        .more-info {
+            cursor: pointer;
+            color: #1d4ed8;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+        .more-info:hover {
+            color: #2563eb; 
+        }
+        .more-info-content {
+            display: none;
+            margin-top: 0.5rem;
+        }
+        @media (max-width: 640px) {
+            .team-card {
+                padding: 1rem;
+            }
+            .team-card img {
+                width: 100px;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h2 class="text-blue-800 mt-4 text-center text-3xl sm:text-4xl font-bold">Team Info</h2>
+</header>
+
+<main class="text-center mt-2 px-4">
+    <input id="teamInput" class="p-2 border-2 rounded m-2" type="text" placeholder="Search for a team">
+
+    <button onclick="loadInfo()" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition-transform transform hover:scale-105">
+        Search
+    </button>
+
+    <div id="container" class="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+
+
+
+
+
+        <!-- Team information will be displayed here -->
+
+
+
+
+    </div>
+</main>
+
+<script src="./sports.js"></script>
+
+</body>
+</html>
